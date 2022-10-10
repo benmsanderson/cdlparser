@@ -1,7 +1,4 @@
-# Copyright (c) 2012-2013, Philip A.D. Bentley
-# All rights reserved.
-# This software is made available under a BSD 3-clause license.
-# Please refer to the accompanying LICENSE.TXT file.
+# Ported from Python2 code by Philip A.D. Bentley at https://github.com/rockdoc/cdlparser
 """
 A python parser for reading files encoded in netCDF-3 CDL format. The parser is based upon the
 flex and yacc files used by the ncgen3 utility that ships with the standard netCDF distribution.
