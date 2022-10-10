@@ -890,20 +890,12 @@ def deescapify(name) :
       i += 1
    return newname
 
-def string_escape(s, encoding='utf-8'):
+def expand_escapes(s, encoding='utf-8'):
     return (s.encode('latin1')         # To bytes, required by 'unicode-escape'
              .decode('unicode-escape') # Perform the actual octal-escaping decode
              .encode('latin1')         # 1:1 mapping back to bytes
              .decode(encoding))        # Decode original encoding
 
-#---------------------------------------------------------------------------------------------------
-def expand_escapes(tstring) :
-#---------------------------------------------------------------------------------------------------
-   """
-   A Python version of ncgen's expand_escapes() function (see escapes.c). This function simply
-   uses the built-in string.decode() method.
-   """
-   return string_escape('unicode_escape')
 
 #---------------------------------------------------------------------------------------------------
 def get_default_fill_value(datatype) :
